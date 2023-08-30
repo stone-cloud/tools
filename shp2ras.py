@@ -1,6 +1,8 @@
-from osgeo import gdal, ogr
 from pathlib import Path
 from typing import Optional
+
+from osgeo import gdal, ogr
+
 
 def shp2ras(shp_path: Path,
             out_path: Path,
@@ -9,8 +11,7 @@ def shp2ras(shp_path: Path,
             NoData: float=0,
             data_type: Optional[object] = gdal.GDT_Byte,
             all_touch: Optional[str] = 'False',
-            snap: Optional[bool] = False,
-            raster: Optional[Path] = None) -> None:
+            snap_raster: Optional[Path] = None) -> None:
     """Burn geometries from the specified list of layer into raster. If you want to konw more details, please refer
     to the following link.
     <https://www.osgeo.cn/gdal/api/gdal_alg.html?highlight=rasterizelayer#_CPPv419GDALRasterizeLayers12GDALDatasetHi
@@ -23,51 +24,36 @@ def shp2ras(shp_path: Path,
         field (str): Identifies an attribute field on the features to be used for a burn in value.
             The value will be burned into all output bands. If specified, padfLayerBurnValues will not
             be used and can be a NULL pointer.
-        NoData (float): Nodata value for output raster
+        NoData (float): Nodata value for output raster.
         data_type (str, optional): Data type of the output data array.inclouding "gdal.GDT_Byte, gdal.GDT_Int16,
             gdal.GDT_UInt16, gdal.GDT_Int32, gdal.GDT_UInt32, gdal.GDT_Float32, gdal.GDT_Float64,
             gdal.GDT_CFloat32, gdal.GDT_CFloat64". Defaults to gdal.GDT_Byte.
         all_touch (:obj:'osgeo._gdalconst', optional): May be set to TRUE to set all pixels touched by the line
             or polygons, not just those whose center is within the polygon or that are selected by brezenhams line
             algorithm. Defaults to FALSE.
-        snap (bool, optional):
-        raster (str, optional):
+        snap_raster (str, optional): Sets a raster that is used to define the cell alignment of an output raster.
+            Defaults to None.
 
     Returns:
         None
     """
 
-    # if isinstance(data_type, str):
-    #     data_type = data_type
-    # elif isinstance(data_type, int):
-    #     data_type = DATA_TYPE[data_type]
-    # else:
-    #     raise NotImplementedError
-    assert shp_path, 'shp_path cannot be empty'
-    assert out_path, 'out_path is empty, please check it.'
+    assert isinstance(shp_path, str), 'shp_path is not str tpye, please check it.'
+    assert isinstance(out_path, str), 'out_path is not str tpye, please check it.'
+    assert isinstance(snap_raster, str), 'out_path is not str tpye, please check it.'
     shpfile = ogr.Open(shp_path, 0)
     lyer = shpfile.GetLayer()
     x_min, x_max, y_min, y_max = lyer.GetExtent()
-    if snap and raster:
-        snap_ras = gdal.Open(raster)
+    if snap_raster:
+        snap_ras = gdal.Open(snap_raster)
         snap_ras_trans = snap_ras.GetGeoTransform()
-        snap_ras_proj = snap_ras.GetProjection()
-        # x_pixel_size, y_pixel_size = snap_ras_trans[1], abs(snap_ras_trans[5])
         x_res = snap_ras.RasterXSize
         y_res = snap_ras.RasterYSize
-        # snap_x_min, sanp_y_max = snap_ras_trans[0], snap_ras_trans[3]
-
-        # if ((x_min - snap_x_min) % x_pixel_size) != 0 or ((y_max - sanp_y_max) % y_pixel_size) != 0:
-        #     x_min = x_min + x_pixel_size - (x_min - snap_x_min) % x_pixel_size
-        #     y_max = y_max + y_pixel_size - (y_max - sanp_y_max) % y_pixel_size
-        # x_res = int((x_max - x_min) / x_pixel_size)
-        # y_res = int((y_max - y_min) / y_pixel_size)
         target_ds = gdal.GetDriverByName('GTiff').Create(out_path, x_res, y_res, 1, data_type,
                                                          options=['BigTIFF=YES', 'TILED=YES', 'COMPRESS=LZW'])
         target_ds.SetGeoTransform(snap_ras_trans)
-        # target_ds.SetGeoTransform((snap_x_min, x_pixel_size, 0, sanp_y_max, 0, -y_pixel_size))
         # target_ds.SetProjection(snap_ras_proj)
-        # del snap_ras
+        del snap_ras
     else:
         if pixel_size:
             x_res = int((x_max - x_min) / pixel_size)
@@ -78,15 +64,12 @@ def shp2ras(shp_path: Path,
         else:
             raise AttributeError
 
-    # target_ds.SetProjection(data.GetProjection())
     band = target_ds.GetRasterBand(1)
     band.SetNoDataValue(NoData)
     if field:
-        print(1)
         gdal.RasterizeLayer(target_ds, [1], lyer,
                             options=["ALL_TOUCHED="+all_touch,"ATTRIBUTE="+field], callback=gdal.TermProgress_nocb)
     else:
-        print(2)
         gdal.RasterizeLayer(target_ds, [1], lyer, burn_values=[1],
                             options=["ALL_TOUCHED=" + all_touch], callback=gdal.TermProgress_nocb)
 
