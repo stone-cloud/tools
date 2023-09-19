@@ -1,8 +1,6 @@
 from pathlib import Path
 from typing import Optional
-
 from osgeo import gdal, ogr
-
 
 def shp2ras(shp_path: Path,
             out_path: Path,
@@ -47,12 +45,13 @@ def shp2ras(shp_path: Path,
     if snap_raster:
         snap_ras = gdal.Open(snap_raster)
         snap_ras_trans = snap_ras.GetGeoTransform()
+        snap_ras_proj = snap_ras.GetProjection()
         x_res = snap_ras.RasterXSize
         y_res = snap_ras.RasterYSize
         target_ds = gdal.GetDriverByName('GTiff').Create(out_path, x_res, y_res, 1, data_type,
                                                          options=['BigTIFF=YES', 'TILED=YES', 'COMPRESS=LZW'])
         target_ds.SetGeoTransform(snap_ras_trans)
-        # target_ds.SetProjection(snap_ras_proj)
+        target_ds.SetProjection(snap_ras_proj)
         del snap_ras
     else:
         if pixel_size:
@@ -77,14 +76,14 @@ def shp2ras(shp_path: Path,
     shpfile.Release()
 
 if __name__ == '__main__':
-    shp_root = r"D:\LYH\dataset\greenhouse\raw_data\pengzhou\shp\澎州_大棚_优化后.shp"
-    out_root = r'D:\LYH\dataset\greenhouse\raw_data\pengzhou\shp\pengzhoudapeng_label.tif'
+    shp_root = r"D:\LYH\dataset\changeSB\rw\shp\2023年5月2日_2023年7月31日水土扰动区监测结果_第二期.shp"
+    out_root = r'D:\LYH\dataset\changeSB\Second\labels\Second_1.tif'
     # out_root1 = r'D:\LYH\dataset\test_data\111\江西赣州宁都县222.tif'
-    ras_root = r"D:\LYH\dataset\greenhouse\raw_data\pengzhou\彭州_19_raw.tif"
+    ras_root = r"D:\LYH\dataset\changeSB\rw\images\20230502_1.tif"
     # mkdir_or_exist(shp_out_root)
     # ras_list = glob.glob(ras_root + '\*.tif')
     # ras_list = [os.path.join(ras_root, 'GF6_PMS_20230401_L1A1420305843_cut_0616_20000id.tif')]
     # with alive_bar(len(ras_list), force_tty=True) as bar:
     # print('共读取影像%d景' %len(ras_list))
-    shp2ras(shp_root, out_root, pixel_size=None, field=None, NoData=0, snap=True, raster=ras_root)
+    shp2ras(shp_root, out_root, pixel_size=None, field=None, NoData=0, snap_raster=ras_root)
     # shp2ras(shp_root, out_root, pixel_size=0.000026, field='gridcode', NoData=0, snap=False, raster=ras_root)
