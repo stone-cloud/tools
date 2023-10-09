@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ced4c55-b8d7-4750-97fb-a4950478b458" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="tools" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\LYH\tools\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="2UeD0cqhBqrAw25tmmmeP0pxdKP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\LYH\tools\untils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.clipTiffwithShp_mask">
+    <configuration name="ClipTiffwithShapefile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/untils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/untils/ClipTiffwithShapefile.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="clipTiffwithShp_mask" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/untils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/untils/clipTiffwithShp_mask.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="feture2shp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/untils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/untils/feture2shp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/randomforest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/randomforest/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_test_split" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_test_split.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.clipTiffwithShp_mask" />
+        <item itemvalue="Python.feture2shp" />
+        <item itemvalue="Python.ClipTiffwithShapefile" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.train_test_split" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ced4c55-b8d7-4750-97fb-a4950478b458" name="Default Changelist" comment="" />
+      <created>1693290930402</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693290930402</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add shp2ras">
+      <created>1693387413639</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1693387413640</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update the parameters of fuction shp2ras">
+      <created>1693388292829</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693388292829</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add shp2ras" />
+    <MESSAGE value="update the parameters of fuction shp2ras" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the parameters of fuction shp2ras" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="189" key="#Inspections" timestamp="1696819449686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="189" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1696819449686" />
+    <state x="414" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1696819315388">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1696819315388" />
+    <state x="611" y="116" key="CommitChangelistDialog2" timestamp="1693388291796">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="611" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1693388291796" />
+    <state x="740" y="264" key="FileChooserDialogImpl" timestamp="1694416521232">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1694416521232" />
+    <state width="1882" height="282" key="GridCell.Tab.0.bottom" timestamp="1696835534903">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1882" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1696835534903" />
+    <state width="1882" height="282" key="GridCell.Tab.0.center" timestamp="1696835534903">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1882" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1696835534903" />
+    <state width="1882" height="282" key="GridCell.Tab.0.left" timestamp="1696835534903">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1882" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1696835534903" />
+    <state width="1882" height="282" key="GridCell.Tab.0.right" timestamp="1696835534903">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1882" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1696835534903" />
+    <state width="1882" height="344" key="GridCell.Tab.1.bottom" timestamp="1696833948294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1882" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1696833948294" />
+    <state width="1882" height="344" key="GridCell.Tab.1.center" timestamp="1696833948294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1882" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1696833948294" />
+    <state width="1882" height="344" key="GridCell.Tab.1.left" timestamp="1696833948294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1882" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1696833948294" />
+    <state width="1882" height="344" key="GridCell.Tab.1.right" timestamp="1696833948294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1882" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1696833948294" />
+    <state x="463" y="165" key="SettingsEditor" timestamp="1693382179158">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1693382179157" />
+    <state x="703" y="227" key="VCS.ChangeListViewerDialog" timestamp="1693388326739">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="703" y="227" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1693388326739" />
+    <state x="488" y="297" key="Vcs.Push.Dialog.v2" timestamp="1696835683181">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="488" y="297" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1696835683181" />
+    <state width="960" height="520" key="XDebugger.FullValuePopup" timestamp="1696744861507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="960" height="520" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1696744861507" />
+    <state x="652" y="355" key="com.intellij.ide.util.TipDialog" timestamp="1695622203200">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="652" y="355" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1695622203200" />
+    <state x="754" y="445" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1696835629903">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="754" y="445" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1696835629903" />
+    <state x="771" y="426" key="git4idea.ui.GitResetDialog" timestamp="1693388327425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="771" y="426" key="git4idea.ui.GitResetDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1693388327425" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
