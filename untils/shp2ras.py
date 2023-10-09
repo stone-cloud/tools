@@ -2,14 +2,15 @@ from pathlib import Path
 from typing import Optional
 from osgeo import gdal, ogr
 
-def shp2ras(shp_path: Path,
+def shp_to_ras(shp_path: Path,
             out_path: Path,
-            pixel_size: float,
-            field: str,
+            pixel_size: Optional[float] = None,
+            field: Optional[str] = None,
             NoData: float=0,
             data_type: Optional[object] = gdal.GDT_Byte,
             all_touch: Optional[str] = 'False',
-            snap_raster: Optional[Path] = None) -> None:
+            snap_raster: Optional[Path] = None,
+            callback=gdal.TermProgress_nocb) -> None:
     """Burn geometries from the specified list of layer into raster. If you want to konw more details, please refer
     to the following link.
     <https://www.osgeo.cn/gdal/api/gdal_alg.html?highlight=rasterizelayer#_CPPv419GDALRasterizeLayers12GDALDatasetHi
@@ -67,10 +68,10 @@ def shp2ras(shp_path: Path,
     band.SetNoDataValue(NoData)
     if field:
         gdal.RasterizeLayer(target_ds, [1], lyer,
-                            options=["ALL_TOUCHED="+all_touch,"ATTRIBUTE="+field], callback=gdal.TermProgress_nocb)
+                            options=["ALL_TOUCHED="+all_touch,"ATTRIBUTE="+field], callback=callback)
     else:
         gdal.RasterizeLayer(target_ds, [1], lyer, burn_values=[1],
-                            options=["ALL_TOUCHED=" + all_touch], callback=gdal.TermProgress_nocb)
+                            options=["ALL_TOUCHED=" + all_touch], callback=callback)
 
     del target_ds
     shpfile.Release()
@@ -85,5 +86,5 @@ if __name__ == '__main__':
     # ras_list = [os.path.join(ras_root, 'GF6_PMS_20230401_L1A1420305843_cut_0616_20000id.tif')]
     # with alive_bar(len(ras_list), force_tty=True) as bar:
     # print('共读取影像%d景' %len(ras_list))
-    shp2ras(shp_root, out_root, pixel_size=None, field=None, NoData=0, snap_raster=ras_root)
+    shp_to_ras(shp_root, out_root, pixel_size=None, field=None, NoData=0, snap_raster=ras_root)
     # shp2ras(shp_root, out_root, pixel_size=0.000026, field='gridcode', NoData=0, snap=False, raster=ras_root)

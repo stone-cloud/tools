@@ -5,7 +5,7 @@ import shutil
 from mmengine import mkdir_or_exist
 
 data_root = r'D:\LYH\dataset\SECOND_train_set'
-out_root = r'D:\LYH\dataset\SECOND_train_test'
+out_root = r'D:\LYH\dataset\SECOND_binary_split'
 mkdir_or_exist(out_root)
 prefixs = ['im1', 'im2', 'label', 'label1', 'label2']
 backend = ['.png', '.png', '.png', '.png', '.png']

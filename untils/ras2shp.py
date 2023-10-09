@@ -13,7 +13,7 @@ from pathlib import Path
     # elif int(complete*100) % 3 == 0:
     #     print(f'{cb_data}', end='', flush=True)
 
-def ras2shp(raster: Path, out_path: Path, **kwargs) -> str:
+def ras_to_shp(raster: Path, out_path: Path, **kwargs) -> str:
     out_shp = os.path.join(out_path, os.path.basename(raster).replace(".tif", ".shp"))
     in_raster = gdal.Open(raster)  # 读取路径中的栅格数据
     in_band = in_raster.GetRasterBand(1)  # 这个波段就是最后想要转为矢量的波段，如果是单波段数据的话那就都是1
@@ -64,4 +64,4 @@ if __name__ == '__main__':
     print('共读取影像%d景' %len(ras_list))
     for i, ras in enumerate(ras_list):
         print(f'第{i+1}景', os.path.basename(ras), '正在处理')
-        ras2shp(ras, shp_out_root)
+        ras_to_shp(ras, shp_out_root)
