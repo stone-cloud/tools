@@ -1,7 +1,23 @@
-from osgeo import ogr
 import os.path as osp
+from pathlib import Path
+from typing import Optional
 
-def featue_to_shp(input_shp, out_path, field):
+from osgeo import ogr
+
+
+def featue_to_shp(input_shp: [Path, str],
+                  out_path: [Path, str],
+                  field: Optional[str] = 'FID'):
+    """
+    Detach form the shape file to each feature and saved as a vector.
+    Args:
+        input_shp (Path, str): The shapefile path that you want to split
+        out_path (Path, str): The path where the detached layer is saved as a vector.
+        field (str, Optional):  The name of vector that be saved detached layer.
+
+    Returns: None
+
+    """
     driver = ogr.GetDriverByName('ESRI Shapefile')
     shapef = ogr.Open(input_shp)
     lyr = shapef.GetLayer()
@@ -22,6 +38,6 @@ def featue_to_shp(input_shp, out_path, field):
         out_file.Destroy()
 
 if __name__ == '__main__':
-    shpfile = r"D:\LYH\dataset\test\shp\F1.shp"
-    out_path = r'D:\LYH\dataset\test\shp'
-    featue_to_shp(shpfile, out_path, 'category')
+    shpfile = r"Z:\光学组\HN_second\data_rectangle\data_rectangle.shp"
+    out_path = r'Z:\光学组\HN_second\data_rectangle\boundary'
+    featue_to_shp(shpfile, out_path, 'productid')
